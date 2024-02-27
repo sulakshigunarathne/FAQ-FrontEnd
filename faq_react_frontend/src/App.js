@@ -1,10 +1,11 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import FaqQuestions from "./Components/FaqQuestions.tsx";
 
 function App() {
   return (
     <div className="App">
-    
+      <br />
+      <FaqQuestions />
     </div>
   );
 }
