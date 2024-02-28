@@ -5,7 +5,7 @@ import { Typography, Link, Container } from "@mui/material";
 const Footer = () => 
 {
     return (
-    <footer className="bg-gray-400 text-white py-4 h-12 fixed bottom-0 w-full">
+    <footer className="bg-cyan-800 text-white py-4 h-12 fixed bottom-0 w-full">
       <Container  maxWidth="sm">
         <Typography variant="body2" align="center" >
           {"Eyepax Copyright © "}
