@@ -1,5 +1,5 @@
 import React, { ChangeEvent, FormEvent, useState } from "react";
-import { useHistory } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import "./AskQuestionForm.css";
 
 interface FormData{
@@ -9,7 +9,7 @@ interface FormData{
 }
 
 function AskQuestionForm(){
-    const history = useHistory();
+    const navigate = useNavigate();
 
     const [formData, setFormData] = useState<FormData>({
         question : "",
@@ -26,7 +26,7 @@ function AskQuestionForm(){
     };
 
     const handleCancel = () => {
-        history.push("/");
+        navigate("/");
     };
 
     const handleSubmit = (e: FormEvent ) => {
@@ -41,7 +41,7 @@ function AskQuestionForm(){
             questionDescription : "",
             keyword : ""
         });
-        history.push("/askQuestion");
+        navigate("/askQuestion");
     };
     
     return(
