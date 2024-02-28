@@ -1,6 +1,6 @@
 import React, { ChangeEvent, FormEvent, useState } from "react";
-// import { useHistory } from "react-router-dom";
-import "./AskQuestionForm.css";
+import { useNavigate } from "react-router-dom";
+import "../Styles/AskQuestionForm.css"
 
 interface FormData{
     question  :string;
@@ -9,7 +9,7 @@ interface FormData{
 }
 
 function AskQuestionForm(){
-    // const history = useHistory();
+    const navigate = useNavigate();
 
     const [formData, setFormData] = useState<FormData>({
         question : "",
@@ -26,7 +26,7 @@ function AskQuestionForm(){
     };
 
     const handleCancel = () => {
-        // history.push("/");
+        navigate("/");
     };
 
     const handleSubmit = (e: FormEvent ) => {
@@ -41,13 +41,13 @@ function AskQuestionForm(){
             questionDescription : "",
             keyword : ""
         });
-        // history.push("/askQuestion");
+        navigate("/askQuestion");
     };
     
     return(
     <div className="askQformContainer">
         <h1>Ask a public question</h1>
-         <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit}>
             <div>
                 <label htmlFor="question">Question</label><br/>
                 <input 
