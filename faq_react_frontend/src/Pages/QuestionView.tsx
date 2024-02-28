@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import {TETabs,TETabsContent,TETabsItem,TETabsPane} from "tw-elements-react";
-import Question from "../Components/Question.tsx";
+import Question from "../Components/Question";
 
-export default function QuestionView(): JSX.Element {
+export default function QuestionView() {
 
   const [fillActive, setFillActive] = useState("all");
 
