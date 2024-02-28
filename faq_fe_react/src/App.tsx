@@ -5,7 +5,7 @@ import FaqQuestions from 'Components/FaqQuestions';
 import Footer from 'Components/Footer';
 import { BrowserRouter, Routes,Route } from 'react-router-dom';
 import AskQuestionForm from 'Components/AskQuestionForm';
-
+import AskQBanner from 'Components/AskQBanner';
 function App() {
   return (
     <div className="App">
@@ -13,11 +13,12 @@ function App() {
       
     <div className='my-5'>
     <BrowserRouter>
+    
     <Routes>
       <Route path='/' element={<FaqQuestions />}/>
       <Route path='/askquestion' element={<AskQuestionForm />}/>
     </Routes>
-      
+    
     </BrowserRouter>
     </div>
     <Footer/>
