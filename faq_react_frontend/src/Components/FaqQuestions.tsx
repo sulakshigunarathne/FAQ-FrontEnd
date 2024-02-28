@@ -26,6 +26,8 @@ export default function AccordionTransition() {
 
   return (
     <div className="m-5 max-w-2xl mx-auto">
+      <br/>
+      <br/>
       {quiz.map((item) => (
         <Accordion
           key={item.key}
