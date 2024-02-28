@@ -10,14 +10,12 @@ function App() {
   return (
     <div className="App">
     <Header/>  
-    
+      
     <div className='my-5'>
-    
     <BrowserRouter>
     
     <Routes>
-    
-      <Route path='/' element={<><AskQBanner /><FaqQuestions /></>}/>
+      <Route path='/' element={<FaqQuestions />}/>
       <Route path='/askquestion' element={<AskQuestionForm />}/>
     </Routes>
     
