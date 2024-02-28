@@ -9,18 +9,18 @@ import AskQuestionForm from 'Components/AskQuestionForm';
 function App() {
   return (
     <div className="App">
-    <Header/>
-    <FaqQuestions />
-    <Footer/>
+    <Header/>  
       
+    <div className='my-5'>
     <BrowserRouter>
     <Routes>
-      <Route path='/askquestion' element={<AskQuestionForm />}>
-        {/* <AskQuestionForm /> */}
-      </Route>
+      <Route path='/' element={<FaqQuestions />}/>
+      <Route path='/askquestion' element={<AskQuestionForm />}/>
     </Routes>
       
     </BrowserRouter>
+    </div>
+    <Footer/>
     </div>
   );
 }
