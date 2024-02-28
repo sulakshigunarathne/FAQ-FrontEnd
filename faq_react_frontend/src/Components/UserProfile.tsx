@@ -6,7 +6,7 @@ import { RxAvatar } from "react-icons/rx";
 const MyProfileComponent = () => {
     const [anchorEl, setAnchorEl] = useState(null);
   
-    const handleClick = (event) => {
+    const handleClick = (event:any) => {
       setAnchorEl(event.currentTarget);
     };
   
