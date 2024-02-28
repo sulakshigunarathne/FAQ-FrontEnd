@@ -4,14 +4,14 @@ import AccordionSummary from "@mui/material/AccordionSummary";
 import AccordionDetails from "@mui/material/AccordionDetails";
 import Typography from "@mui/material/Typography";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
-import Fade from "@mui/material/Fade";
-import Questions from "../FaqRecords/FaqQuestion.json"; // Import your Questions JSON file
+import Fade from "@mui/material/Fade"; // Import your Questions JSON file
+import { Questions } from "../FaqRecords/Questions";
 
 export default function AccordionTransition() {
-  const [expanded, setExpanded] = React.useState({});
+  const [expanded, setExpanded] = React.useState<any>({});
 
-  const handleExpansion = (key) => {
-    setExpanded((prevExpanded) => ({
+  const handleExpansion = (key:any) => {
+    setExpanded((prevExpanded:any) => ({
       ...prevExpanded,
       [key]: !prevExpanded[key],
     }));
@@ -26,10 +26,12 @@ export default function AccordionTransition() {
 
   return (
     <div className="m-5 max-w-2xl mx-auto">
+      <br/>
+      <br/>
       {quiz.map((item) => (
         <Accordion
           key={item.key}
-          expanded={expanded[item.key] || false}
+          expanded={expanded[item?.key] || false}
           onChange={() => handleExpansion(item.key)}
           slots={{ transition: Fade as AccordionSlots["transition"] }}
           slotProps={{ transition: { timeout: 400 } }}
