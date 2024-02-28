@@ -1,4 +1,3 @@
-import "./App.css";
 import FaqQuestions from "./Components/FaqQuestions.tsx";
 import Header from "./Components/Header.tsx";
 
