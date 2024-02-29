@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import {TETabs,TETabsContent,TETabsItem,TETabsPane} from "tw-elements-react";
 import Question from "../Components/Question";
 
