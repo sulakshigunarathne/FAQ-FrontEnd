@@ -17,7 +17,7 @@ function App() {
     <BrowserRouter>
     
     <Routes>
-      <Route path='/' element={<FaqQuestions />}/>
+      <Route path='/' element={<><AskQBanner/><FaqQuestions /></>}/>
       <Route path='/askquestion' element={<AskQuestionForm />}/>
       <Route path='/question-view' element = {<QuestionView/>} />
       <Route path='/answer-view' element= {<AnswerView/>} />
