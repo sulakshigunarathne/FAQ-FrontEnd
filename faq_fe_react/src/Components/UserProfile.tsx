@@ -16,8 +16,8 @@ const MyProfileComponent = () => {
   
     return (
       <div>
-        <RxAvatar
-          style={{ fontSize: '45px', cursor: 'pointer' }}
+        <RxAvatar className="text-cyan-800 font-bold"
+          style={{ fontSize: '48px', cursor: 'pointer' }}
           onClick={handleClick}
         />
   
