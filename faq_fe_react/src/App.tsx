@@ -11,11 +11,11 @@ function App() {
     <div className="App">
     <Header/>  
       
-    <div className='my-5'>
+    <div>
     <BrowserRouter>
     
     <Routes>
-      <Route path='/' element={<FaqQuestions />}/>
+      <Route path='/' element={<><AskQBanner/><FaqQuestions /></>}/>
       <Route path='/askquestion' element={<AskQuestionForm />}/>
     </Routes>
     

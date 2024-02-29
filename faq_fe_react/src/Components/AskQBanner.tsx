@@ -15,11 +15,14 @@ function AskQBanner() {
         alt="Banner"
         className="w-full h-64 object-cover"
       />
-      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center">
+      <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center ">
         <h1 className="text-4xl font-bold text-white">Any Tech Question?</h1>
         <br/>
         <h1 className="text-4xl font-bold text-white">Find your answer</h1>
+        <div className="absolute">
         <button className="bg-blue-500 text-white px-4 py-2 mt-4" onClick={handleAskQ}>Click here</button>
+        <button className="bg-blue-500 text-white px-4 py-2 mt-4" onClick={handleAskQ}>All Questions</button>
+        </div>
       </div>
     </div> 
   )
