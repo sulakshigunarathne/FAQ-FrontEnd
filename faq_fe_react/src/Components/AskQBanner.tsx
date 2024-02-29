@@ -7,6 +7,10 @@ function AskQBanner() {
   const handleAskQ = () => {
     Navigate('/askquestion');
   }
+
+  const handleQ = () => {
+    Navigate('/question-view')
+  }
   const Navigate = useNavigate();
   return (
     <div className='relative'>
@@ -21,7 +25,7 @@ function AskQBanner() {
         <h1 className="text-4xl font-bold text-white">Find your answer</h1>
         <div className="absolute">
         <button className="bg-blue-500 text-white px-4 py-2 mt-4" onClick={handleAskQ}>Click here</button>
-        <button className="bg-blue-500 text-white px-4 py-2 mt-4" onClick={handleAskQ}>All Questions</button>
+        <button className="bg-blue-500 text-white px-4 py-2 mt-4" onClick={handleQ}>All Questions</button>
         </div>
       </div>
     </div> 
