@@ -1,6 +1,14 @@
+import { BiSolidDislike,BiSolidLike } from "react-icons/bi";
 import { TETextarea, TERipple } from "tw-elements-react";
 
 export default function AnswerView() {
+
+  // const [clickCount, setClickCount] = useState(0);
+
+  // const handleClick = () => {
+  //   setClickCount(clickCount + 1);
+  // };
+
   return (
     <div>
       <div className="mx-auto items-center content-center flex justify-center mt-5">
@@ -17,12 +25,11 @@ export default function AnswerView() {
               rows={3}
             ></TETextarea>
           </div>
-          
+
           <div>
-            
             <TERipple className="w-full">
               <button
-                type="submit" 
+                type="submit"
                 className="mb-2 mt-1 w-full rounded border-2 px-6 pb-[6px] pt-2 text-xs
                  text-primary transition ease-in-out
                  hover:border-primary-600 hover:bg-neutral-500 hover:bg-opacity-10
@@ -33,17 +40,27 @@ export default function AnswerView() {
             </TERipple>
           </div>
 
-          <div className="mx-7 mt-7">
-            <li className="w-full border-b-2 border-neutral-100 border-opacity-100 py-4 dark:border-opacity-50">
-              Answer
+          <div className="mx-7 mt-7 flex">
+            <li className="w-1/12 mt-4 flex">
+              <div>
+                <button >
+                  <li>
+                    <BiSolidLike className="mx-2" />
+                  </li>
+                </button>
+                <div className="w-4 h-4 mx-2 border-2 text-xs"></div>
+              </div>
+
+              <div>
+                <button>
+                  <li>
+                    <BiSolidDislike className="mx-2" />
+                  </li>
+                </button>
+                <div className="w-4 h-4 mx-2 border-2 text-xs"></div>
+              </div>
             </li>
-            <li className="w-full border-b-2 border-neutral-100 border-opacity-100 py-4 dark:border-opacity-50">
-              Answer
-            </li>
-            <li className="w-full border-b-2 border-neutral-100 border-opacity-100 py-4 dark:border-opacity-50">
-              Answer
-            </li>
-            <li className="w-full border-b-2 border-neutral-100 border-opacity-100 py-4 dark:border-opacity-50">
+            <li className="w-full border-b-2 flex border-neutral-100 border-opacity-100 py-4 dark:border-opacity-50">
               Answer
             </li>
           </div>
