@@ -1,5 +1,6 @@
 import React, { ChangeEvent, FormEvent, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import axios from "axios";
 import "../Styles/AskQuestionForm.css"
 
 interface FormData{
@@ -29,19 +30,29 @@ function AskQuestionForm(){
         navigate("/");
     };
 
-    const handleSubmit = (e: FormEvent ) => {
+    const handleSubmit = async (e: FormEvent ) => {
         e.preventDefault();
 
-        console.log("Form Data :", formData);
+        try{
+            const response = await axios.post("", formData);
 
-        alert("Question Posted Successfully...!");
+            console.log("Form Data :", response.data);
 
-        setFormData({
-            question : "",
-            questionDescription : "",
-            keyword : ""
-        });
-        navigate("/askQuestion");
+            alert("Question Posted Successfully...!");
+
+            setFormData({
+                question : "",
+                questionDescription : "",
+                keyword : ""
+            });
+
+            navigate("/askQuestion");
+        }
+        catch(error){
+            console.error("Error posting question : ", error);
+            alert("Error while posting question. Please try again..!");
+        }
+        
     };
     
     return(

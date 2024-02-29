@@ -56,6 +56,10 @@
     padding: 10px 15px;
 }
 
+.askQformContainer button:hover{
+    filter : brightness(0.7);
+}
+
 .askQformContainer .submit{
     background-color: forestgreen;
     border: 1px solid darkgreen;
