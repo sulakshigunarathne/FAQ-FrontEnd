@@ -41,6 +41,12 @@ export default function AccordionTransition() {
             "& .MuiAccordionDetails-root": {
               display: expanded[item.key] ? "block" : "none",
             },
+            "& .MuiAccordionSummary-root": {
+              borderBottom: "3px solid #ddd", 
+            },
+            "& .MuiTypography-root": {
+              fontFamily: "Arial, sans-serif",
+            },
           }}
         >
           <AccordionSummary

@@ -18,27 +18,6 @@ export default function AnswerView() {
             Quesction .........................
           </li>
 
-          <div className="mt-8">
-            <TETextarea
-              id="textareaExample"
-              label="Add Your Answer"
-              rows={3}
-            ></TETextarea>
-          </div>
-
-          <div>
-            <TERipple className="w-full">
-              <button
-                type="submit"
-                className="mb-2 mt-1 w-full rounded border-2 px-6 pb-[6px] pt-2 text-xs
-                 text-primary transition ease-in-out
-                 hover:border-primary-600 hover:bg-neutral-500 hover:bg-opacity-10
-                 hover:text-primary-600 focus:border-primary-600 focus:outline-none"
-              >
-                Add Answer
-              </button>
-            </TERipple>
-          </div>
 
           <div className="mx-7 mt-7 flex">
             <li className="w-1/12 mt-4 flex">
@@ -63,6 +42,29 @@ export default function AnswerView() {
             <li className="w-full border-b-2 flex border-neutral-100 border-opacity-100 py-4 dark:border-opacity-50">
               Answer
             </li>
+            
+          </div>
+          
+          <div className="mt-8">
+            <TETextarea
+              id="textareaExample"
+              label="Add Your Answer"
+              rows={3}
+            ></TETextarea>
+          </div>
+
+          <div>
+            <TERipple className="w-full">
+              <button
+                type="submit"
+                className="mb-2 mt-1 w-full rounded border-2 px-6 pb-[6px] pt-2 text-xs
+                 text-primary transition ease-in-out
+                 hover:border-primary-600 hover:bg-neutral-500 hover:bg-opacity-10
+                 hover:text-primary-600 focus:border-primary-600 focus:outline-none"
+              >
+                Add Answer
+              </button>
+            </TERipple>
           </div>
         </ul>
       </div>
