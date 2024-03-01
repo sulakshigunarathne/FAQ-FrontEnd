@@ -1,9 +1,10 @@
 import React from 'react'
 import Qphoto from "Assets/Images/Qbanner.jpg";
-import { Navigate, useNavigate } from "react-router-dom";
+import {  useNavigate } from "react-router-dom";
 
 
 function AskQBanner() {
+  const Navigate = useNavigate();
   const handleAskQ = () => {
     Navigate('/askquestion');
   }
@@ -11,7 +12,6 @@ function AskQBanner() {
   const handleQ = () => {
     Navigate('/question-view')
   }
-  const Navigate = useNavigate();
   return (
     <div className='relative'>
       <img

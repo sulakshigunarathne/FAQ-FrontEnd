@@ -11,10 +11,10 @@ import AnswerView from 'Pages/AnswerView';
 function App() {
   return (
     <div className="App">
-    <Header/>  
       
     <div>
     <BrowserRouter>
+    <Header/>  
     
     <Routes>
       <Route path='/' element={<><AskQBanner/><FaqQuestions /></>}/>
