@@ -1,16 +1,44 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import {TETabs,TETabsContent,TETabsItem,TETabsPane} from "tw-elements-react";
 import Question from "../Components/Question";
+import AnswerView from "./AnswerView";
+import axios from "axios";
+
+interface QuestionType {
+  // Define the structure of a question
+  id: number;
+  // other properties...
+}
 
 export default function QuestionView() {
 
   const [fillActive, setFillActive] = useState("all");
+  const [questions, setQuestions] = useState([]);
+  const [selectedQuestionID, setSelectedQuestionID] = useState<number | null>(null);
+
+  useEffect(() =>{
+
+    const fetchQuestionbyID = async () => {
+      try {
+        const response = await axios.get('https://backend-api.com/questions')
+        setQuestions(response.data);
+      }catch (error) {
+        console.error('Error fetching questions:', error);
+      }
+    };
+      fetchQuestionbyID();
+  }, []);
 
   const handleFillClick = (value: string) => {
     if (value === fillActive) {
       return;
     }
     setFillActive(value);
+    setSelectedQuestionID(null);
+  };
+
+  const handleViewQuestion = (questionID) => {
+    setSelectedQuestionID(questionID);
   };
 
   return (
@@ -34,12 +62,16 @@ export default function QuestionView() {
 
       <TETabsContent>
         <TETabsPane show={fillActive === "all"}>
-          <Question Que={"All q"}/>
+          <Question questions={questions} onView={handleViewQuestion} />
         </TETabsPane>
         <TETabsPane show={fillActive === "my"}>
-          <Question Que={"My q"}/>
+        <Question questions={questions} onView={handleViewQuestion} />
         </TETabsPane>
       </TETabsContent>
+
+      {selectedQuestionID && (
+          <AnswerView questionID = {selectedQuestionID} />
+        )}
     </div>
 
     </div>

@@ -25,9 +25,16 @@ const MyProfileComponent = () => {
           anchorEl={anchorEl}
           open={Boolean(anchorEl)}
           onClose={handleClose}
+          PaperProps={{
+            style: {
+              background: 'White', // Background color of the menu
+              borderRadius: '8px', // Border radius of the menu
+              border: '3px solid #3b82f6'
+            },
+          }}
         >
-          <MenuItem onClick={handleClose}>View Profile</MenuItem>
-          <MenuItem onClick={handleClose}>Log out</MenuItem>
+          <MenuItem className="text-red-800 border-3" onClick={handleClose}>View Profile</MenuItem>
+          <MenuItem className="text-cyan-800 border-b" onClick={handleClose}>Log out</MenuItem>
           
         </Menu>
       </div>
