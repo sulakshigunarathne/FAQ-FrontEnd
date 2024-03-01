@@ -63,14 +63,14 @@ export default function QuestionView() {
             active={fillActive === "all"}
             
           >
-            <h1 className="font-black">All Questions</h1>
+            <h1 className="font-serif text-lg">All Questions</h1>
             
           </TETabsItem>
           <TETabsItem
             onClick={() => handleFillClick("my")}
             active={fillActive === "my"}
           >
-            <h1 className="font-black">My Questions</h1>
+            <h1 className="font-serif text-lg">My Questions</h1>
             
           </TETabsItem>
         </TETabs>
@@ -79,11 +79,11 @@ export default function QuestionView() {
           <TETabsPane show={fillActive === "all"}>
           {questionData.map((question) => (
             <div className="mt-5 mx-auto items-center content-center flex justify-center"  key={question.id}>
-              <div className="flex justify-between self-center bg-gray-100 border rounded p-4 my-2 m-5 w-5/6">
+              <div className="flex justify-between self-center bg-white border rounded p-4 my-2 m-5 w-5/6">
                 <p className="">{question.question}</p>
                 <div>
                   <button
-                    className="px-2 py-2 w-auto bg-blue-500 text-white rounded mt-2 hover:bg-blue-600"
+                    className="px-2 py-2 w-auto bg-slate-500 text-white rounded mt-2 hover:bg-blue-600"
                     onClick={answerViewHandle}
                   >
                     View Answer
@@ -96,11 +96,11 @@ export default function QuestionView() {
           <TETabsPane show={fillActive === "my"}>
           {myQuestionData.map((myQuestion) => (
             <div className="mt-5 mx-auto items-center content-center flex justify-center" key={myQuestion.id}>
-              <div className="flex justify-between self-center bg-gray-100 border rounded p-4 my-2 m-5 w-5/6">
+              <div className="flex justify-between self-center bg-white border rounded p-4 my-2 m-5 w-5/6">
                 <p className="">{myQuestion.question}</p>
                 <div>
                   <button
-                    className="px-2 py-2 w-auto bg-blue-500 text-white rounded mt-2 hover:bg-blue-600"
+                    className="px-2 py-2 w-auto bg-slate-500 text-white rounded mt-2 hover:bg-blue-600"
                     onClick={answerViewHandle}
                   >
                     View Answer
