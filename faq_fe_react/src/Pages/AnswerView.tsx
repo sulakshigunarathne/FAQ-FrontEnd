@@ -3,20 +3,18 @@ import { TETextarea, TERipple } from "tw-elements-react";
 
 export default function AnswerView() {
 
-  // const [clickCount, setClickCount] = useState(0);
-
-  // const handleClick = () => {
-  //   setClickCount(clickCount + 1);
-  // };
-
   return (
     <div>
       <div className="mx-auto items-center content-center flex justify-center mt-5">
         <div className="flex justify-center"></div>
         <ul className="w-10/12 mt-7">
-          <li className="w-full rounded-lg bg-primary-100 p-4">
+          <li className="w-full rounded-lg bg-primary-100 p-4 ">
             Quesction .........................
+            {/* <hr className="decoration-black"/> */}
+            <p className="text-sm mx-7 mt-5">Question description</p>
+
           </li>
+          
 
 
           <div className="mx-7 mt-7 flex">
